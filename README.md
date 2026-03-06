@@ -40,7 +40,7 @@ Authored HTML5/CSS3-annotated Zeplin specs with interaction states, accessibilit
 
 ---
 
-## Featured Screen: RBAC Account Management
+## Screen 1: RBAC Account Management
 
 > Role-Based Access Control interface for managing user permissions across VA regional offices.
 
@@ -52,6 +52,21 @@ Authored HTML5/CSS3-annotated Zeplin specs with interaction states, accessibilit
 - Sortable column headers with persistent sort indicators — supports legal staff who need to quickly audit user access by date or office
 - Status badges (Active/Inactive) use color + text — not color alone — to meet WCAG 1.4.1 non-text contrast
 - Overflow menus (⋮) keep the table scannable by hiding secondary actions until needed
+
+---
+
+## Screen 2: Permissions Role Assignment Modal
+
+> Inline modal for assigning OIT system roles to individual users without leaving the account management view.
+
+![GCLAWS Permissions Modal](./screenshots/rbac-permissions-modal.png)
+
+**Design decisions shown:**
+- Modal overlay keeps the user in context — the account table remains visible behind the dialog, reinforcing which user is being edited
+- Dropdown surfaces the three OIT role tiers (System Account Manager, System Administrator, System Owner) with a clear selected state — no ambiguity about current assignment
+- Active selection highlighted in brand blue (#1976D2) with sufficient contrast — meets WCAG AA for interactive element states
+- Cancel / Confirm CTA pair follows Material Design button hierarchy — destructive/neutral action left, primary action right — consistent with user mental models from broader VA tooling
+- Modal is keyboard-navigable and focus-trapped — Section 508 compliant interaction pattern
 
 ---
 
